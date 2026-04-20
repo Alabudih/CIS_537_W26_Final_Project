@@ -149,10 +149,11 @@ p4-dvpf-replication/
 ## 9. How to Run
 🖥️ Prerequisites
 Linux (Ubuntu recommended)
-P4 language compiler (p4c)
+```P4 language compiler (p4c)
 BMv2
 Mininet
 Python 3
+```
 
 
 ▶️ Step 1: Compile the P4 Program (Terminal 1)
@@ -169,23 +170,26 @@ p4c-bm2-ss --p4v 16 \
   --p4runtime-files build/dvpf.p4info.txtpb \
   -o build/dvpf.json \
   p4/dvpf.p4
+  ```
   
 ▶️ Step 2: Start Network Topology (Terminal 1)
 
-sudo python3 utils/run_exercise.py \
+```sudo python3 utils/run_exercise.py \
   -t topology/topology.json \
   -j build/dvpf.json
+```
 
 This runs the programmable switch and keeps it active.
 
 ▶️ Step 3: Load Security Policy (Terminal 2)
 
-cd p4-dvpf-replication
+```cd p4-dvpf-replication
 
 python3 controller/controller.py \
   --p4info build/dvpf.p4info.txtpb \
   --bmv2-json build/dvpf.json \
   --runtime topology/s1-runtime.json
+```
 
 This installs forwarding rules and attack-detection policies into the switch.
 
@@ -193,11 +197,12 @@ This installs forwarding rules and attack-detection policies into the switch.
 
 Inside the Mininet CLI (Terminal 1):
 
-h1 ping h2
+```h1 ping h2
 
 Optional (simulate attack):
 
 h1 python3 scripts/attack_simulation.py
+```
 
 ### Option A: Reproduce the evaluation plots
 ```bash
