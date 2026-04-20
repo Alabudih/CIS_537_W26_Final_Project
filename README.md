@@ -3,16 +3,14 @@
 ## Replication **of the P4-DVPF framework for real-time attack detection in programmable SDN data planes using P4, BMv2, and Mininet.**
 **Author:** Hasan Alabudi  
 **Course:** CIS 537 Advanced Networking
-
 **Section:** 2
-
 **Term:** Winter 2026
 
 ## 1. Introduction
 
-This repository contains a replication-oriented implementation and report for the paper **“P4-DVPF: Dynamic Verification of Packets Forwarding Based on P4 for SDN”** by Wenxiu Zhang, Shan Jing, Lei Guo, and Chuan Zhao, presented at the **2023 International Conference on Intelligent Computing and Next Generation Networks (ICNGN 2023)**. The paper proposes moving forwarding-verification and attack-detection logic from the centralized SDN controller into the **programmable data plane** using P4, with the goal of reducing detection latency and improving responsiveness against data-plane attacks such as abnormal new-flow surges and forwarding-path hijacking. The conference listing and publicly indexed paper metadata identify the title, authors, venue, date, and DOI: **10.1109/ICNGN59831.2023.10396715**. citeturn360604search0turn360604search5
+This repository contains a replication-oriented implementation and report for the paper **“P4-DVPF: Dynamic Verification of Packets Forwarding Based on P4 for SDN”** by Wenxiu Zhang, Shan Jing, Lei Guo, and Chuan Zhao, presented at the **2023 International Conference on Intelligent Computing and Next Generation Networks (ICNGN 2023)**. The paper proposes moving the forwarding-verification and attack-detection logic from the centralized SDN controller to the programmable data plane using P4, with the goal of reducing detection latency and improving responsiveness to data-plane attacks such as abnormal new-flow surges and forwarding-path hijacking. The conference listing and publicly indexed paper metadata identify the title, authors, venue, date, and DOI: **10.1109/ICNGN59831.2023.10396715**. citeturn360604search0turn360604search5
 
-Why this matters: in traditional SDN, the controller often becomes the observation and decision bottleneck. By embedding verification logic into the switch pipeline, the paper argues that the network can react faster and with less control-plane overhead. That core idea aligns closely with the broader motivation for P4 itself: programming protocol-independent packet processors so network behavior can be customized directly in the forwarding plane. citeturn360604search0turn360604search8
+Why this matters: In traditional SDN, the controller often becomes the bottleneck for observation and decision-making. By embedding verification logic into the switch pipeline, the paper argues that the network can react faster and with less control-plane overhead. That core idea aligns closely with the broader motivation for P4 itself: programming protocol-independent packet processors so network behavior can be customized directly in the forwarding plane. citeturn360604search0turn360604search8
 
 ## 2. Result / Claim Chosen and Why
 
@@ -33,13 +31,13 @@ This was selected because it is the paper’s central systems contribution:
 Based on the publicly available abstracted metadata and descriptions of the work, the paper’s methodology can be summarized as follows:
 
 1. **Programmable switch pipeline using P4.**  
-   Detection-related logic is moved into the data plane so forwarding devices participate directly in verification and anomaly handling. citeturn360604search0turn360604search8
+   Detection-related logic is moved to the data plane, enabling forwarding devices to participate directly in verification and anomaly handling. citeturn360604search0turn360604search8
 
 2. **Dynamic forwarding verification.**  
-   The framework verifies packet forwarding behavior rather than relying only on a controller’s delayed view of the network. The verification is dynamic, meaning the system adjusts when and how aggressively packets are checked to reduce overhead. citeturn360604search0
+   The framework verifies packet-forwarding behavior rather than relying solely on a controller’s delayed view of the network. The verification is dynamic, meaning the system adjusts when and how aggressively packets are checked to reduce overhead. citeturn360604search0
 
 3. **Attack focus.**  
-   The paper targets data-plane threats including:
+   The paper targets data-plane threats, including:
    - abnormal new-stream / new-flow behavior, and
    - forwarding-path or packet-hijacking style attacks. citeturn360604search0
 
@@ -62,7 +60,7 @@ This implementation is a **course-project replication**, not a bit-for-bit rebui
 
 - the BMv2/P4 pipeline here is a **minimal educational implementation**, not a vendor-optimized deployment;
 - the detection logic in the runnable scripts uses **threshold-based anomaly decisions** and path-consistency checks rather than any unavailable proprietary or unpublished full model details;
-- the performance graphs include a **paper vs. replication comparison** using values reconstructed from the paper’s reported qualitative behavior and the class replication setup, because full raw experiment traces from the paper were not publicly available in the sources I could verify. citeturn360604search0
+- The performance graphs include a **paper vs. replication comparison** using values reconstructed from the paper’s reported qualitative behavior and the class replication setup, because full raw experiment traces from the paper were not publicly available in the sources I could verify. citeturn360604search0
 
 That divergence was necessary to keep the repository runnable, transparent, and self-contained.
 
@@ -108,7 +106,7 @@ The replication does not claim numeric equivalence with the original paper. The 
 A helpful way to interpret this paper is to see it as part of a broader trend:
 - **classic SDN** emphasizes centralized control,
 - **P4-based data planes** shift selected network functions closer to packets in flight,
-- **security monitoring in the switch** is attractive because response time matters.
+- **Security monitoring in the switch** is attractive because response time matters.
 
 This project also shows a practical lesson: even when a paper’s exact artifact is unavailable, a valuable replication can still reproduce the **claim**, **evaluation logic**, and **engineering tradeoffs** in a transparent way.
 
@@ -239,7 +237,7 @@ Do **not** include external libraries or virtual environments.
 
 ## 11. GitHub Submission Note
 
-The URL of this repository is in the comment field, and I uploaded a ZIP containing only the files I created.
+The repository URL is in the comment field, and I uploaded a ZIP file containing only the files I created.
 
 ## 12. Reference
 
