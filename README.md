@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # CIS 537 / CIS 574 Advanced Networking Final Project
 ## Replication of **P4-DVPF: Dynamic Verification of Packets Forwarding Based on P4 for SDN**
 **Author:** Hasan Alabudi  
@@ -156,6 +156,7 @@ Python 3
 
 
 ▶️ Step 1: Compile the P4 Program (Terminal 1)
+
 cd p4-dvpf-replication
 mkdir -p build
 
@@ -163,8 +164,14 @@ p4c-bm2-ss --p4v 16 \
   --p4runtime-files build/dvpf.p4info.txtpb \
   -o build/dvpf.json \
   p4/dvpf.p4
+
+p4c-bm2-ss --p4v 16 \
+  --p4runtime-files build/dvpf.p4info.txtpb \
+  -o build/dvpf.json \
+  p4/dvpf.p4
   
 ▶️ Step 2: Start Network Topology (Terminal 1)
+
 sudo python3 utils/run_exercise.py \
   -t topology/topology.json \
   -j build/dvpf.json
@@ -172,6 +179,7 @@ sudo python3 utils/run_exercise.py \
 This runs the programmable switch and keeps it active.
 
 ▶️ Step 3: Load Security Policy (Terminal 2)
+
 cd p4-dvpf-replication
 
 python3 controller/controller.py \
