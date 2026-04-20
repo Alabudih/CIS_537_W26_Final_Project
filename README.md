@@ -1,10 +1,10 @@
 
-# CIS 537 / CIS 574 Advanced Networking Final Project
+# CIS 537 Advanced Networking Final Project
 ## Replication **of the P4-DVPF framework for real-time attack detection in programmable SDN data planes using P4, BMv2, and Mininet.**
 **Author:** Hasan Alabudi  
 **Course:** CIS 537 Advanced Networking
 
-** Section:** 2
+**Section:** 2
 
 **Term:** Winter 2026
 
