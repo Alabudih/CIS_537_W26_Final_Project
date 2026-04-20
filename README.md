@@ -1,8 +1,9 @@
 
 # CIS 537 / CIS 574 Advanced Networking Final Project
-## Replication of **P4-DVPF: Dynamic Verification of Packets Forwarding Based on P4 for SDN**
+## Replication of **of the P4-DVPF framework for real-time attack detection in programmable SDN data planes using P4, BMv2, and Mininet.**
 **Author:** Hasan Alabudi  
-**Course:** Advanced Networking  
+**Course:** CIS 537 Advanced Networking
+** Section:** 2
 **Term:** Winter 2026
 
 ## 1. Introduction
@@ -243,6 +244,3 @@ The URL of this repository is in the comment field, and I uploaded a ZIP contain
 1. Wenxiu Zhang, Shan Jing, Lei Guo, and Chuan Zhao, **“P4-DVPF: Dynamic Verification of Packets Forwarding Based on P4 for SDN,”** *2023 International Conference on Intelligent Computing and Next Generation Networks (ICNGN)*, 2023, DOI: 10.1109/ICNGN59831.2023.10396715. citeturn360604search0turn360604search5  
 2. Pat Bosshart et al., **“P4: Programming Protocol-Independent Packet Processors,”** *ACM SIGCOMM Computer Communication Review*, 2014. citeturn360604search8
 =======
-# CIS_537_W26_Final_Project
-Replication of the P4-DVPF framework for real-time attack detection in programmable SDN data planes using P4, BMv2, and Mininet.
->>>>>>> 117c0df20a4b2e3add95fe6655781facec7d0979
